@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
     <title>Cadastro</title>
 </head>
+
 <body>
-    <form action="./php/cadastro.php" method="post">
-        <div>
-            <input type="text" name="txtnome" id="txtnome" required>
-            <input type="email" name="txtemail" id="txtemail" required>
-            <input type="password" name="txtsenha" id="txtsenha" required>
-            <input type="radio" name="txtsexo" id="txtsexo" value="F">
-            <input type="radio" name="txtsexo" id="txtsexo" value="M">
-            <input type="date" name="txtdata" id="txtdata" required>
+    <main>
+        <div class="container-formulario">
+            <form action="./php/cadastro.php" method="post">
+                <div class="formulario_inputs">
+                    <label for="txtnome">Nome</label>
+                    <input class="formulario-input" type="text" name="txtnome" id="txtnome" placeholder="Seu nome" required>
+                    <label for="txtemail">E-mail</label>
+                    <input class="formulario-input" type="email" name="txtemail" id="txtemail" placeholder="Seu e-mail" required>
+                    <label for="txtsenha">Senha</label>
+                    <input class="formulario-input" type="password" name="txtsenha" id="txtsenha" placeholder="Senha" required>
+                    <label for="txtsexo">Sexo</label>
+                    <div>
+                        <label>F</label>
+                        <input type="radio" name="txtsexo" id="txtsexo" value="F">
+                        <label>M</label>
+                        <input type="radio" name="txtsexo" id="txtsexo" value="M">
+                    </div>
+                    <label for="txtdata">Data de Nascimento</label>
+                    <input type="date" name="txtdata" id="txtdata" required>
+                </div>
+                <div class="container_btn">
+                    <button class="btn" type="submit">Cadastrar</button>
+                    <button class="btn" type="reset">Limpar</button>
+                    <a class="btn" href="./index.html">Voltar</a>
+                </div>
+            </form>
         </div>
-        <div>
-            <button type="submit">Cadastrar</button>
-            <button type="reset">Limpar</button>
-        </div>
-    </form>
+    </main>
 </body>
+
 </html>

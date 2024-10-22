@@ -10,6 +10,6 @@
 
     echo "<script language='JavaScript'>
             alert('Dados cadastrados com sucesso!');
-            location.href = '../cadastro.html';
-        </script>"
+            location.href = '../index.html';
+        </script>";
 ?>
