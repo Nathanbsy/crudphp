@@ -2,7 +2,8 @@
     echo "<link rel='stylesheet' href='../css/pesquisa.css'>";
     include "conexao.php";
     $crit = $_POST["txtnome"];
-    $pesq = $cmd -> query("select * from tbusuario where nome_t like '$crit%'");
+    $pesq = $cmd -> query("select * from tbcrud where nome_t like '$crit%'");
+    // $pesq = $cmd -> query("select * from tbusuario where nome_t like '$crit%'");
     $total_registros = $pesq -> rowCount();
 
     if ($total_registros == 0) {
@@ -28,12 +29,14 @@
     }
     while($row = $pesq->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
-        echo "<td>{$row['codi_t']}</td>";
+        echo "<td>{$row['codigo_t']}</td>";
+        // echo "<td>{$row['codi_t']}</td>";
         echo "<td>{$row['nome_t']}</td>";
         echo "<td>{$row['email_t']}</td>";
         echo "<td>{$row['senha_t']}</td>";
         echo "<td>{$row['sexo_t']}</td>";
-        echo "<td>{$row['dtna_t']}</td>";
+        echo "<td>{$row['data_t']}</td>";
+        // echo "<td>{$row['dtna_t']}</td>";
         echo "</tr>";
         
         

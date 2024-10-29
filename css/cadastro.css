@@ -6,8 +6,9 @@
     list-style: none;
 }
 
-body {
+body  {
     font-family: "Poppins";
+    background-color: #faf9f6;
 }
 
 main {

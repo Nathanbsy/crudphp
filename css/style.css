@@ -8,6 +8,7 @@
 
 body  {
     font-family: "Poppins";
+    background-color: #faf9f6;
 }
 
 main {
@@ -36,12 +37,24 @@ main {
 .lista li {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 150px;
     background-color: #595959;
     border-radius: 12px;
+    transition: .4s;
+}
+
+.lista li:hover {
+    margin: 15px 0 5px;
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 22px;
     text-decoration: none;
     color: white;
