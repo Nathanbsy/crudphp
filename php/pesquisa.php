@@ -44,6 +44,6 @@
     echo "</div>";
     echo "</main>";
     echo "<div class='container-botao pesquisa'>";
-    echo "<a href='../pesquisar.html'>Nova Pesquisa</a>'";
+    echo "<a href='../pesquisar.html'>Nova Pesquisa</a>";
     echo "</div>";
 ?>

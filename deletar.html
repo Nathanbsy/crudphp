@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/deletar.css">
     <title>Deletar</title>
 </head>
 <body>
     <main>
-        <div>
-            
+        <div class="container-formulario">
+            <form action="./php/deletar.php" method="post">
+                <input type="number" name="inpcod" id="inpcod" placeholder="Digite o código" required>
+                <button class="btn" type="submit">Excluir</button>
+            </form>
+            <div class="container-botao del">
+                <a class="btn" href="./index.html">Voltar</a>
+            </div>
         </div>
     </main>
 </body>
