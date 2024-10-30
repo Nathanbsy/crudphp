@@ -34,12 +34,14 @@
                         $vsenha = $_POST["txtsenha"];
                         $vsexo = $_POST["txtsexo"];
                         $vdata = $_POST["txtdata"];
-                        $salvar = $cmd->query("update tbcrud set nome_t = '$vnome', email_t = '$vemail', senha_t = '$vsenha', sexo_t = '$vsexo', data_t = '$vdata' where codigo_t = $codigo; ");
+                        $salvar = $cmd->query("update tbcrud set nome_t = '$vnome', email_t = '$vemail', senha_t = '$vsenha', sexo_t = '$vsexo', data_t = '$vdata' where codigo_t = $codigo;");
+                        // $salvar = $cmd->query("update tbusuario set nome_t = '$vnome', email_t = '$vemail', senha_t = '$vsenha', sexo_t = '$vsexo', dtna_t = '$vdata' where codigo_t = $codigo;");
                     }
                 }
                 ?>
                 <label for="inpcod">Código</label>
                 <input type="number" name="inpcod" id="inpcod" placeholder="Coloque o código" required value="<?php echo isset($row['codigo_t']) ? htmlspecialchars($row['codigo_t']) : ''; ?>">
+                <!-- codi_t -->
                 <label for="txtnome">Nome</label>
                 <input type="text" name="txtnome" id="txtnome" value="<?php echo isset($row['nome_t']) ? htmlspecialchars($row['nome_t']) : ''; ?>">
                 <label for="txtemail">Email</label>
@@ -51,6 +53,7 @@
                 <input type="password" name="txtsenha" id="txtsenha" value="<?php echo isset($row['senha_t']) ? htmlspecialchars($row['senha_t']) : ''; ?>">
                 <label for="txtdata">Data Nascimento</label>
                 <input type="date" name="txtdata" id="txtdata" value="<?php echo isset($row['data_t']) ? htmlspecialchars($row['data_t']) : ''; ?>">
+                <!-- dtna_t -->
                 
                 <button class="btn" id="btnPesq" type="submit" onclick="buscarDados()">Pesquisar</button>
                 <button class="btn" id="btnSalv" type="submit" onclick="salvarDados()">Salvar</button>
